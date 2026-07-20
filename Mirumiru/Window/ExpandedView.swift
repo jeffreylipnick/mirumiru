@@ -42,6 +42,6 @@ struct ExpandedView: View {
                         .foregroundStyle(.secondary)
                 }
             }
-        }
+        }.padding(12)
     }
 }

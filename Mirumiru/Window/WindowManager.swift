@@ -7,7 +7,7 @@ final class WindowManager {
     private let lookupService: LookupService
     private var window: NSWindow?
     private let viewModel = LookupViewModel()
-    
+
     init() {
         self.lookupService = LookupService(
             selectionProvider: AccessibilitySelectionProvider(),
@@ -16,22 +16,40 @@ final class WindowManager {
             )
         )
     }
-    
+
     func show() {
+        let needsPositioning = (window == nil)
+
         if window == nil {
             createWindow()
         }
 
         updateSize()
-        positionWindow()
+
+        if needsPositioning {
+            positionWindow()
+        }
 
         window?.makeKeyAndOrderFront(nil)
+        window?.orderFrontRegardless()
     }
-    
+
     func lookupSelectedText() {
         Task {
-            if let result = await lookupService.lookupSelection() {
-                viewModel.update(result: result)
+            let result = await lookupService.lookupSelection()
+
+            if let result {
+                viewModel.update(
+                    result: result
+                )
+            } else {
+                let selected = AccessibilitySelectionProvider()
+                    .selectedText() ?? ""
+
+                viewModel.update(
+                    result: nil,
+                    message: "No result found for \(selected)"
+                )
             }
 
             show()
@@ -48,7 +66,12 @@ final class WindowManager {
         )
 
         let newWindow = NSWindow(
-            contentRect: .zero,
+            contentRect: NSRect(
+                x: 0,
+                y: 0,
+                width: 340,
+                height: 180
+            ),
             styleMask: [
                 .titled,
                 .closable
@@ -58,8 +81,16 @@ final class WindowManager {
         )
 
         newWindow.title = "ミルミル"
+
         newWindow.contentView = hostingView
+
+        // Keep above other applications
         newWindow.level = .floating
+
+        // Prevent user resizing
+        newWindow.styleMask.remove(.resizable)
+
+        // Keep window alive after closing
         newWindow.isReleasedWhenClosed = false
 
         window = newWindow

@@ -4,36 +4,20 @@ struct LookupView: View {
     @ObservedObject var viewModel: LookupViewModel
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack {
+            if let result = viewModel.result {
+                switch viewModel.mode {
+                case .compact:
+                    CompactView(result: result)
 
-            HStack {
-                Spacer()
-
-                Button {
-                    viewModel.toggleMode()
-                } label: {
-                    Text(
-                        viewModel.mode == .compact
-                        ? "Expand"
-                        : "Compact"
-                    )
+                case .expanded:
+                    ExpandedView(result: result)
                 }
-            }
-
-            if viewModel.mode == .compact {
-                CompactView(
-                    result: viewModel.result
-                )
             } else {
-                ExpandedView(
-                    result: viewModel.result
-                )
+                Text(viewModel.message)
+                    .padding(12)
             }
-
-            Spacer()
         }
-        .padding()
-        .frame(maxWidth: .infinity,
-               maxHeight: .infinity)
+        .id(viewModel.lookupID)
     }
 }
