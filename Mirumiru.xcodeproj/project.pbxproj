@@ -10,22 +10,29 @@
 		21A38814CA4FAA80B65F00D1 /* HotkeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38F64792E36B4A6AFDC009C /* HotkeyManager.swift */; };
 		2E2DFBBD25B0CE6208E1C70D /* LookupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 145A0885CB42A12CEDB8E4BD /* LookupViewModel.swift */; };
 		3C434C12206A78CCEF85D904 /* SelectionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52715CB245C94D049E6DA293 /* SelectionProvider.swift */; };
+		44FAB3CDF5872AB5434D89C0 /* DictionaryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C33A8046FE0BCA3CC28CD36 /* DictionaryEntry.swift */; };
 		4BA46A2D914B6E952C877055 /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD910236962CC25276D1FF7 /* WindowManager.swift */; };
 		5015DD7B4E189B898FAF2994 /* AccessibilitySelectionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B20E29F4398F67442D33B78 /* AccessibilitySelectionProvider.swift */; };
 		553752E7161F7B70BFFD9785 /* CompactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF2928B3B338359E273669A /* CompactView.swift */; };
 		586BCBE09992FDFD01084462 /* ExpandedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45889BE32096838C4617D94B /* ExpandedView.swift */; };
 		91C3BBB1F46B73E6F46361F3 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 48650E502F82DF599FD0B1D4 /* KeyboardShortcuts */; };
+		9BEF14E910B6672AD460A212 /* DictionaryDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051C96BC2D065F6C54AF0DEB /* DictionaryDatabase.swift */; };
 		9FCB4AFF941E1DE6109ED616 /* MockLookupProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE31725527A88869655329C /* MockLookupProvider.swift */; };
 		A3EBFFCF2027902C2CB603CC /* LookupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A867E710422AF81AECADEE44 /* LookupService.swift */; };
 		A97B2D70DD36E90DF021E881 /* LookupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049ED4A4B022CEEFB9036FA9 /* LookupView.swift */; };
+		AB77A6FB5864244CD9BCF1DD /* JMdictLookupProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E15544D15C24257D76BBF /* JMdictLookupProvider.swift */; };
 		AD45077709F7FE24DB8584A6 /* LookupProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AF604E8498DEF76D5846B8 /* LookupProvider.swift */; };
+		B77FD9881CBB9AF06F7C80B8 /* jmdict.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 11FA155807ECC77CFF7C00EC /* jmdict.sqlite */; };
 		C9932D95433A72740F6B4DAD /* MirumiruApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3455B8488BD51B7080562C /* MirumiruApp.swift */; };
 		E17A8A1D7776055D64BD55A2 /* LookupResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785C918D1A34E51EF40B242E /* LookupResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		049ED4A4B022CEEFB9036FA9 /* LookupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupView.swift; sourceTree = "<group>"; };
+		051C96BC2D065F6C54AF0DEB /* DictionaryDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryDatabase.swift; sourceTree = "<group>"; };
 		0BF2928B3B338359E273669A /* CompactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactView.swift; sourceTree = "<group>"; };
+		0C33A8046FE0BCA3CC28CD36 /* DictionaryEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryEntry.swift; sourceTree = "<group>"; };
+		11FA155807ECC77CFF7C00EC /* jmdict.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = jmdict.sqlite; sourceTree = "<group>"; };
 		145A0885CB42A12CEDB8E4BD /* LookupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupViewModel.swift; sourceTree = "<group>"; };
 		15AF604E8498DEF76D5846B8 /* LookupProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupProvider.swift; sourceTree = "<group>"; };
 		45889BE32096838C4617D94B /* ExpandedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedView.swift; sourceTree = "<group>"; };
@@ -37,6 +44,7 @@
 		A38F64792E36B4A6AFDC009C /* HotkeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotkeyManager.swift; sourceTree = "<group>"; };
 		A867E710422AF81AECADEE44 /* LookupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupService.swift; sourceTree = "<group>"; };
 		CF3455B8488BD51B7080562C /* MirumiruApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirumiruApp.swift; sourceTree = "<group>"; };
+		D05E15544D15C24257D76BBF /* JMdictLookupProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMdictLookupProvider.swift; sourceTree = "<group>"; };
 		DCE31725527A88869655329C /* MockLookupProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLookupProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +98,14 @@
 			path = Lookup;
 			sourceTree = "<group>";
 		};
+		80D3A9693F77B292E1EEEACF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				11FA155807ECC77CFF7C00EC /* jmdict.sqlite */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		C6A53A37B9893681F632BCE0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,13 +118,25 @@
 			isa = PBXGroup;
 			children = (
 				CF3455B8488BD51B7080562C /* MirumiruApp.swift */,
+				F2041975EC26E448E5EAC6C0 /* Dictionary */,
 				F8D77CE1F07C5AD12D1D2F26 /* Hotkey */,
 				5CF59E8C36A419DE001748CE /* Lookup */,
 				5494A851FDF366AB66C28296 /* Models */,
+				80D3A9693F77B292E1EEEACF /* Resources */,
 				FB055435D6408998B5006C1C /* Selection */,
 				564AD45FA34CE401B422CAF5 /* Window */,
 			);
 			path = Mirumiru;
+			sourceTree = "<group>";
+		};
+		F2041975EC26E448E5EAC6C0 /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				051C96BC2D065F6C54AF0DEB /* DictionaryDatabase.swift */,
+				0C33A8046FE0BCA3CC28CD36 /* DictionaryEntry.swift */,
+				D05E15544D15C24257D76BBF /* JMdictLookupProvider.swift */,
+			);
+			path = Dictionary;
 			sourceTree = "<group>";
 		};
 		F8D77CE1F07C5AD12D1D2F26 /* Hotkey */ = {
@@ -136,6 +164,7 @@
 			buildConfigurationList = 5C33940F7C0A02A9111C0C73 /* Build configuration list for PBXNativeTarget "Mirumiru" */;
 			buildPhases = (
 				6185FC1AD266C3A65C063238 /* Sources */,
+				DC1421B5DF2217F8B003B947 /* Resources */,
 				A0B1F67574FB3E9D0D1EC961 /* Frameworks */,
 			);
 			buildRules = (
@@ -158,8 +187,6 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = A8D02650728EE09A85EEA4AD /* Build configuration list for PBXProject "Mirumiru" */;
 			developmentRegion = en;
@@ -183,6 +210,17 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		DC1421B5DF2217F8B003B947 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B77FD9881CBB9AF06F7C80B8 /* jmdict.sqlite in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6185FC1AD266C3A65C063238 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -190,8 +228,11 @@
 			files = (
 				5015DD7B4E189B898FAF2994 /* AccessibilitySelectionProvider.swift in Sources */,
 				553752E7161F7B70BFFD9785 /* CompactView.swift in Sources */,
+				9BEF14E910B6672AD460A212 /* DictionaryDatabase.swift in Sources */,
+				44FAB3CDF5872AB5434D89C0 /* DictionaryEntry.swift in Sources */,
 				586BCBE09992FDFD01084462 /* ExpandedView.swift in Sources */,
 				21A38814CA4FAA80B65F00D1 /* HotkeyManager.swift in Sources */,
+				AB77A6FB5864244CD9BCF1DD /* JMdictLookupProvider.swift in Sources */,
 				AD45077709F7FE24DB8584A6 /* LookupProvider.swift in Sources */,
 				E17A8A1D7776055D64BD55A2 /* LookupResult.swift in Sources */,
 				A3EBFFCF2027902C2CB603CC /* LookupService.swift in Sources */,
@@ -211,7 +252,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = U48J95M59M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSUIElement = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -220,6 +264,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mirumiru.app;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};
@@ -229,7 +274,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = U48J95M59M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSUIElement = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -238,6 +286,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mirumiru.app;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
 			};

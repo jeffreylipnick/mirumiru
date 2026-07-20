@@ -11,7 +11,9 @@ final class WindowManager {
     init() {
         self.lookupService = LookupService(
             selectionProvider: AccessibilitySelectionProvider(),
-            lookupProvider: MockLookupProvider()
+            lookupProvider: JMdictLookupProvider(
+                database: DictionaryDatabase()
+            )
         )
     }
     
