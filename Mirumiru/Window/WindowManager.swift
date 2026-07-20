@@ -3,9 +3,18 @@ import SwiftUI
 
 @MainActor
 final class WindowManager {
+
+    private let lookupService: LookupService
     private var window: NSWindow?
     private let viewModel = LookupViewModel()
-
+    
+    init() {
+        self.lookupService = LookupService(
+            selectionProvider: AccessibilitySelectionProvider(),
+            lookupProvider: MockLookupProvider()
+        )
+    }
+    
     func show() {
         if window == nil {
             createWindow()
@@ -15,6 +24,16 @@ final class WindowManager {
         positionWindow()
 
         window?.makeKeyAndOrderFront(nil)
+    }
+    
+    func lookupSelectedText() {
+        Task {
+            if let result = await lookupService.lookupSelection() {
+                viewModel.update(result: result)
+            }
+
+            show()
+        }
     }
 
     private func createWindow() {

@@ -15,7 +15,10 @@
 		553752E7161F7B70BFFD9785 /* CompactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF2928B3B338359E273669A /* CompactView.swift */; };
 		586BCBE09992FDFD01084462 /* ExpandedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45889BE32096838C4617D94B /* ExpandedView.swift */; };
 		91C3BBB1F46B73E6F46361F3 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 48650E502F82DF599FD0B1D4 /* KeyboardShortcuts */; };
+		9FCB4AFF941E1DE6109ED616 /* MockLookupProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE31725527A88869655329C /* MockLookupProvider.swift */; };
+		A3EBFFCF2027902C2CB603CC /* LookupService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A867E710422AF81AECADEE44 /* LookupService.swift */; };
 		A97B2D70DD36E90DF021E881 /* LookupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049ED4A4B022CEEFB9036FA9 /* LookupView.swift */; };
+		AD45077709F7FE24DB8584A6 /* LookupProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AF604E8498DEF76D5846B8 /* LookupProvider.swift */; };
 		C9932D95433A72740F6B4DAD /* MirumiruApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3455B8488BD51B7080562C /* MirumiruApp.swift */; };
 		E17A8A1D7776055D64BD55A2 /* LookupResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 785C918D1A34E51EF40B242E /* LookupResult.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +27,7 @@
 		049ED4A4B022CEEFB9036FA9 /* LookupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupView.swift; sourceTree = "<group>"; };
 		0BF2928B3B338359E273669A /* CompactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactView.swift; sourceTree = "<group>"; };
 		145A0885CB42A12CEDB8E4BD /* LookupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupViewModel.swift; sourceTree = "<group>"; };
+		15AF604E8498DEF76D5846B8 /* LookupProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupProvider.swift; sourceTree = "<group>"; };
 		45889BE32096838C4617D94B /* ExpandedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedView.swift; sourceTree = "<group>"; };
 		4CD910236962CC25276D1FF7 /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
 		52715CB245C94D049E6DA293 /* SelectionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionProvider.swift; sourceTree = "<group>"; };
@@ -31,7 +35,9 @@
 		7B20E29F4398F67442D33B78 /* AccessibilitySelectionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilitySelectionProvider.swift; sourceTree = "<group>"; };
 		A0A33E9FC4CCC1AA2CCE549A /* Mirumiru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mirumiru.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A38F64792E36B4A6AFDC009C /* HotkeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotkeyManager.swift; sourceTree = "<group>"; };
+		A867E710422AF81AECADEE44 /* LookupService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookupService.swift; sourceTree = "<group>"; };
 		CF3455B8488BD51B7080562C /* MirumiruApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MirumiruApp.swift; sourceTree = "<group>"; };
+		DCE31725527A88869655329C /* MockLookupProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLookupProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,16 @@
 			path = Window;
 			sourceTree = "<group>";
 		};
+		5CF59E8C36A419DE001748CE /* Lookup */ = {
+			isa = PBXGroup;
+			children = (
+				15AF604E8498DEF76D5846B8 /* LookupProvider.swift */,
+				A867E710422AF81AECADEE44 /* LookupService.swift */,
+				DCE31725527A88869655329C /* MockLookupProvider.swift */,
+			);
+			path = Lookup;
+			sourceTree = "<group>";
+		};
 		C6A53A37B9893681F632BCE0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +103,7 @@
 			children = (
 				CF3455B8488BD51B7080562C /* MirumiruApp.swift */,
 				F8D77CE1F07C5AD12D1D2F26 /* Hotkey */,
+				5CF59E8C36A419DE001748CE /* Lookup */,
 				5494A851FDF366AB66C28296 /* Models */,
 				FB055435D6408998B5006C1C /* Selection */,
 				564AD45FA34CE401B422CAF5 /* Window */,
@@ -175,10 +192,13 @@
 				553752E7161F7B70BFFD9785 /* CompactView.swift in Sources */,
 				586BCBE09992FDFD01084462 /* ExpandedView.swift in Sources */,
 				21A38814CA4FAA80B65F00D1 /* HotkeyManager.swift in Sources */,
+				AD45077709F7FE24DB8584A6 /* LookupProvider.swift in Sources */,
 				E17A8A1D7776055D64BD55A2 /* LookupResult.swift in Sources */,
+				A3EBFFCF2027902C2CB603CC /* LookupService.swift in Sources */,
 				A97B2D70DD36E90DF021E881 /* LookupView.swift in Sources */,
 				2E2DFBBD25B0CE6208E1C70D /* LookupViewModel.swift in Sources */,
 				C9932D95433A72740F6B4DAD /* MirumiruApp.swift in Sources */,
+				9FCB4AFF941E1DE6109ED616 /* MockLookupProvider.swift in Sources */,
 				3C434C12206A78CCEF85D904 /* SelectionProvider.swift in Sources */,
 				4BA46A2D914B6E952C877055 /* WindowManager.swift in Sources */,
 			);

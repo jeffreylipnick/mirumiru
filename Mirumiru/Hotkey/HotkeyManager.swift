@@ -22,7 +22,7 @@ final class HotkeyManager {
         KeyboardShortcuts.onKeyDown(
             for: .lookupJapanese
         ) { [weak self] in
-//            self?.windowManager.show()
+//            self?.windowManager.lookupSelectedText()
             let selection = AccessibilitySelectionProvider()
                 .selectedText()
 
