@@ -1,0 +1,26 @@
+name: Mirumiru
+
+options:
+  bundleIdPrefix: com.mirumiru
+
+packages:
+  KeyboardShortcuts:
+    url: https://github.com/sindresorhus/KeyboardShortcuts
+    from: 2.3.0
+
+targets:
+  Mirumiru:
+    type: application
+    platform: macOS
+    deploymentTarget: "14.0"
+    sources:
+      - Mirumiru
+    dependencies:
+      - package: KeyboardShortcuts
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.mirumiru.app
+        SWIFT_VERSION: 5.0
+        MACOSX_DEPLOYMENT_TARGET: 14.0
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_LSUIElement: YES
